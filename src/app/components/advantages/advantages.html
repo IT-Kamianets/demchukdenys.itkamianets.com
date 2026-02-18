@@ -9,7 +9,7 @@
       @for (advantage of advantages; track advantage.title; let i = $index) {
         <div class="text-center">
           <div class="w-20 h-20 border-2 border-beige rounded-full flex items-center justify-center mx-auto mb-6">
-            <span class="text-2xl font-bold text-beige">{{ i + 1 }}</span>
+            <img [src]="advantage.icon" [alt]="advantage.title" class="w-10 h-10">
           </div>
           <h3 class="text-lg font-semibold mb-3 text-beige-light">{{ advantage.title }}</h3>
           <p class="text-gray-400 text-sm leading-relaxed">{{ advantage.description }}</p>
