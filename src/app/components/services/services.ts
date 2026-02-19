@@ -12,18 +12,18 @@ import { ScrollAnimateChildrenDirective } from '../../directives/scroll-animate-
 export class ServicesComponent {
   services = [
     {
-      title: 'Дизайн інтер\'єру',
-      description: 'Створюємо стильні та функціональні інтер\'єри для будь-якої кімнати',
+      title: 'Кухні на замовлення',
+      description: 'Проєктуємо та виготовляємо кухні будь-якої складності — від мінімалістичних до класичних',
       image: 'img/services/k4.jpg',
     },
     {
-      title: 'Меблі на замовлення',
-      description: 'Унікальні меблі, створені спеціально для вашого простору',
+      title: 'Корпусні меблі',
+      description: 'Комоди, тумби та інші меблі на замовлення з індивідуальним дизайном',
       image: 'img/services/m4.jpg',
     },
     {
-      title: 'Замір простору',
-      description: 'Точний вимір вашого приміщення для ідеального планування',
+      title: 'Гардеробні системи',
+      description: 'Вбудовані гардеробні та шафи з продуманою організацією простору',
       image: 'img/services/p4.jpg',
     },
   ];

@@ -14,11 +14,11 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   private touchStartX = 0;
 
   portfolioItems = [
-    { id: 1, title: 'Кухня в стилі модерн', description: 'Елегантна кухня з натуральних матеріалів у сучасному стилі', image: 'img/slider/k1.jpg' },
-    { id: 2, title: 'Спальня преміум-класу', description: 'Комфортна та стильна спальня з індивідуальним дизайном', image: 'img/slider/k3.jpg' },
-    { id: 3, title: 'Вітальня в класичному стилі', description: 'Розкішна вітальня з меблями ручної роботи', image: 'img/slider/m1.jpg' },
-    { id: 4, title: 'Гардеробна кімната', description: 'Функціональний простір для зберігання з продуманою організацією', image: 'img/slider/k1.jpg' },
-    { id: 5, title: 'Кухня-студія', description: 'Сучасна кухня відкритого планування з островом', image: 'img/slider/k3.jpg' },
+    { id: 1, title: 'Кухня «Біла класика»', description: 'П-подібна кухня з дерев\'яною стільницею та темним фартухом', image: 'img/slider/k1.jpg' },
+    { id: 2, title: 'Кухня з барною стійкою', description: 'Сучасна сіра кухня з барною зоною та оксамитовими стільцями', image: 'img/slider/k3.jpg' },
+    { id: 3, title: 'Спальний гарнітур', description: 'Ліжко з м\'яким узголів\'ям та приліжковою тумбою', image: 'img/slider/m1.jpg' },
+    { id: 4, title: 'Кухня «Мінімалізм»', description: 'Пряма кухня у бежевих тонах з вбудованою технікою', image: 'img/services/k4.jpg' },
+    { id: 5, title: 'Гардеробна система', description: 'Біла гардеробна з дзеркальною секцією та робочим столом', image: 'img/services/p4.jpg' },
   ];
 
   ngOnInit() {
