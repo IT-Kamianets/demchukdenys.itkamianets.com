@@ -1,0 +1,79 @@
+<section class="py-16 lg:py-24 bg-warm-white min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4">Продукція</h1>
+      <div class="w-16 h-1 bg-beige mx-auto mb-4"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">Наша продукція — це якісні меблі та комплектуючі для вашого дому.</p>
+    </div>
+
+    <!-- Search bar -->
+    <div class="max-w-xl mx-auto mb-8">
+      <div class="flex items-center bg-white border border-gray-200 rounded-full overflow-hidden shadow-sm">
+        <input
+          type="text"
+          placeholder="Пошук продукції..."
+          class="flex-1 bg-transparent text-dark placeholder-gray-400 px-6 py-3 outline-none text-sm"
+          [(ngModel)]="searchQuery"
+          (keyup.enter)="router.navigate(['/products'], { queryParams: searchQuery.trim() ? { q: searchQuery.trim() } : {} })"
+        />
+        @if (searchQuery.trim()) {
+          <button
+            (click)="resetSearch()"
+            class="px-4 py-3 text-gray-400 hover:text-dark transition-colors"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        }
+      </div>
+      @if (searchQuery.trim()) {
+        <p class="text-sm text-gray-500 mt-2 text-center">
+          Знайдено {{ filteredProducts.length }} результатів за запитом "{{ searchQuery.trim() }}"
+        </p>
+      }
+    </div>
+
+    <!-- Category filter -->
+    <div class="flex flex-wrap justify-center gap-3 mb-10">
+      @for (cat of categories; track cat.key) {
+        <button
+          (click)="activeCategory = cat.key"
+          class="px-6 py-2 rounded-full text-sm font-semibold transition-colors"
+          [class]="activeCategory === cat.key ? 'bg-beige text-dark' : 'bg-white text-gray-600 hover:bg-gray-100'"
+        >
+          {{ cat.label }}
+        </button>
+      }
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (product of filteredProducts; track product.id) {
+        <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img [src]="product.image" [alt]="product.title" loading="lazy" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-dark mb-2">{{ product.title }}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed mb-4">{{ product.description }}</p>
+            <p class="text-beige-dark font-bold text-lg">{{ product.price | number }} грн</p>
+          </div>
+        </div>
+      }
+    </div>
+
+    @if (filteredProducts.length === 0) {
+      <div class="text-center py-12">
+        <p class="text-gray-500 text-lg mb-4">Нічого не знайдено</p>
+        <button (click)="resetSearch()" class="text-beige-dark font-semibold hover:text-dark transition-colors">
+          Скинути пошук
+        </button>
+      </div>
+    }
+
+    <div class="text-center mt-12">
+      <a routerLink="/" class="inline-flex items-center text-beige-dark font-semibold hover:text-dark transition-colors">
+        <svg class="w-4 h-4 mr-2 rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        На головну
+      </a>
+    </div>
+  </div>
+</section>

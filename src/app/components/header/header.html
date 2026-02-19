@@ -8,10 +8,10 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-8">
-        <a routerLink="/" fragment="news" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Новини</a>
-        <a routerLink="/" fragment="portfolio" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Роботи</a>
-        <a routerLink="/" fragment="services" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Продукція</a>
-        <a routerLink="/" fragment="advantages" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Послуги</a>
+        <a routerLink="/articles" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Новини</a>
+        <a routerLink="/portfolios" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Роботи</a>
+        <a routerLink="/products" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Продукція</a>
+        <a routerLink="/services" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Послуги</a>
       </nav>
 
       <!-- Social / Contact -->
@@ -44,12 +44,12 @@
 
     <!-- Mobile menu -->
     @if (mobileMenuOpen) {
-      <div class="md:hidden pb-4 border-t border-gray-700">
+      <div class="md:hidden pb-4 border-t border-gray-700 animate-[fadeIn_0.2s_ease-out]">
         <nav class="flex flex-col space-y-3 pt-4">
-          <a routerLink="/" fragment="news" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Новини</a>
-          <a routerLink="/" fragment="portfolio" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Роботи</a>
-          <a routerLink="/" fragment="services" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Продукція</a>
-          <a routerLink="/" fragment="advantages" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors">Послуги</a>
+          <a routerLink="/articles" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Новини</a>
+          <a routerLink="/portfolios" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Роботи</a>
+          <a routerLink="/products" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Продукція</a>
+          <a routerLink="/services" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Послуги</a>
         </nav>
         <div class="flex items-center space-x-4 pt-4">
           <a href="https://t.me/demchuk_denys" target="_blank" rel="noopener" class="hover:opacity-70 transition-opacity">

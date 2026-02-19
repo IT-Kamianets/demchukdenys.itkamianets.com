@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { ScrollAnimateDirective } from '../../directives/scroll-animate';
 
 @Component({
   selector: 'app-services',
-  imports: [],
+  imports: [RouterLink, ScrollAnimateDirective],
   templateUrl: './services.html',
   styles: [],
 })

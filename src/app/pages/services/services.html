@@ -1,0 +1,42 @@
+<section class="py-16 lg:py-24 bg-warm-white min-h-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4">Наші послуги</h1>
+      <div class="w-16 h-1 bg-beige mx-auto mb-4"></div>
+      <p class="text-gray-600 max-w-2xl mx-auto">Повний цикл створення меблів — від ідеї до встановлення у вашому домі.</p>
+    </div>
+
+    <div class="space-y-12">
+      @for (service of services; track service.title; let i = $index) {
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+          <div class="grid grid-cols-1 lg:grid-cols-2" [class]="i % 2 === 1 ? 'lg:grid-flow-col-dense' : ''">
+            <div class="aspect-[16/10] lg:aspect-auto overflow-hidden" [class]="i % 2 === 1 ? 'lg:col-start-2' : ''">
+              <img [src]="service.image" [alt]="service.title" loading="lazy" class="w-full h-full object-cover">
+            </div>
+            <div class="p-8 lg:p-12 flex flex-col justify-center">
+              <h2 class="text-2xl font-bold text-dark mb-4">{{ service.title }}</h2>
+              <div class="w-12 h-1 bg-beige mb-4"></div>
+              <p class="text-gray-600 leading-relaxed mb-6">{{ service.description }}</p>
+              <h4 class="text-sm uppercase tracking-widest text-beige-dark font-semibold mb-3">Що включає:</h4>
+              <ul class="space-y-2">
+                @for (item of service.includes; track item) {
+                  <li class="flex items-start text-gray-600 text-sm">
+                    <svg class="w-5 h-5 text-beige mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+                    {{ item }}
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="text-center mt-12">
+      <a routerLink="/" class="inline-flex items-center text-beige-dark font-semibold hover:text-dark transition-colors">
+        <svg class="w-4 h-4 mr-2 rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        На головну
+      </a>
+    </div>
+  </div>
+</section>
