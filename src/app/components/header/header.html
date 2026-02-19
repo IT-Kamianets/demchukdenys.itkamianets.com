@@ -1,4 +1,7 @@
-<header class="bg-dark text-white">
+<header
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  [class]="scrolled ? 'bg-dark/95 backdrop-blur-md shadow-lg shadow-black/20' : 'bg-dark'"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
@@ -46,10 +49,10 @@
     @if (mobileMenuOpen) {
       <div class="md:hidden pb-4 border-t border-gray-700 animate-[fadeIn_0.2s_ease-out]">
         <nav class="flex flex-col space-y-3 pt-4">
-          <a routerLink="/articles" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Новини</a>
-          <a routerLink="/portfolios" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Роботи</a>
-          <a routerLink="/products" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Продукція</a>
-          <a routerLink="/services" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors" routerLinkActive="text-beige">Послуги</a>
+          <a routerLink="/articles" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors py-1" routerLinkActive="text-beige">Новини</a>
+          <a routerLink="/portfolios" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors py-1" routerLinkActive="text-beige">Роботи</a>
+          <a routerLink="/products" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors py-1" routerLinkActive="text-beige">Продукція</a>
+          <a routerLink="/services" (click)="mobileMenuOpen = false" class="text-sm uppercase tracking-widest text-gray-300 hover:text-beige transition-colors py-1" routerLinkActive="text-beige">Послуги</a>
         </nav>
         <div class="flex items-center space-x-4 pt-4">
           <a href="https://t.me/demchuk_denys" target="_blank" rel="noopener" class="hover:opacity-70 transition-opacity">
@@ -69,3 +72,6 @@
     }
   </div>
 </header>
+
+<!-- Spacer for fixed header -->
+<div class="h-16 lg:h-20"></div>

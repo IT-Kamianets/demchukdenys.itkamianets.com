@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
@@ -9,4 +9,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class HeaderComponent {
   mobileMenuOpen = false;
+  scrolled = false;
+
+  @HostListener('window:scroll')
+  onScroll() {
+    this.scrolled = window.scrollY > 20;
+  }
 }

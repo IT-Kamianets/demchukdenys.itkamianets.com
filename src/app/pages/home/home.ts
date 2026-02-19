@@ -6,6 +6,7 @@ import { ServicesComponent } from '../../components/services/services';
 import { ArticlesComponent } from '../../components/articles/articles';
 import { AdvantagesComponent } from '../../components/advantages/advantages';
 import { ContactFormComponent } from '../../components/contact-form/contact-form';
+import { CtaBannerComponent } from '../../components/cta-banner/cta-banner';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +17,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
     ArticlesComponent,
     AdvantagesComponent,
     ContactFormComponent,
+    CtaBannerComponent,
   ],
   templateUrl: './home.html',
   styles: [],

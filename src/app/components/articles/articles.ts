@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ScrollAnimateDirective } from '../../directives/scroll-animate';
+import { ScrollAnimateChildrenDirective } from '../../directives/scroll-animate-children';
 
 @Component({
   selector: 'app-articles',
-  imports: [RouterLink, ScrollAnimateDirective],
+  imports: [RouterLink, ScrollAnimateDirective, ScrollAnimateChildrenDirective],
   templateUrl: './articles.html',
   styles: [],
 })

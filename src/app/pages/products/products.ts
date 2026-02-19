@@ -22,12 +22,12 @@ export class ProductsPage implements OnInit {
   ];
 
   products = [
-    { id: 1, title: 'Кухня "Модерн"', description: 'Сучасна кухня з матовими фасадами та кварцовою стільницею.', price: 85000, category: 'kitchen', image: 'img/product/1.jpg' },
-    { id: 2, title: 'Кухня "Класика"', description: 'Класична кухня з фасадами з масиву дуба та різьбленням.', price: 120000, category: 'kitchen', image: 'img/product/2.jpg' },
-    { id: 3, title: 'Шафа-купе "Комфорт"', description: 'Вбудована шафа-купе з дзеркальними дверима та LED-підсвіткою.', price: 45000, category: 'furniture', image: 'img/services/k4.jpg' },
-    { id: 4, title: 'Комод "Скандинавія"', description: 'Комод з масиву сосни у скандинавському стилі з висувними ящиками.', price: 18500, category: 'furniture', image: 'img/services/m4.jpg' },
-    { id: 5, title: 'Стільниця з кварцу', description: 'Стільниця преміум-класу з натурального кварцу, стійка до подряпин.', price: 12000, category: 'accessories', image: 'img/services/p4.jpg' },
-    { id: 6, title: 'Фурнітура Blum', description: 'Комплект фурнітури Blum для кухонних шаф з системою плавного закривання.', price: 8500, category: 'accessories', image: 'img/product/1.jpg' },
+    { id: 1, title: 'Кухня "Модерн"', description: 'Матові фасади МДФ, кварцова стільниця 30 мм, фурнітура Blum. Система push-to-open.', price: 85000, category: 'kitchen', image: 'img/product/1.jpg' },
+    { id: 2, title: 'Кухня "Класика"', description: 'Масив дуба з різьбленням ручної роботи, гранітна стільниця. Патинування у золотистий відтінок.', price: 120000, category: 'kitchen', image: 'img/product/2.jpg' },
+    { id: 3, title: 'Шафа-купе "Комфорт"', description: 'Дзеркальні двері на всю висоту, система Raumplus. LED-підсвітка з датчиком відкривання.', price: 45000, category: 'furniture', image: 'img/services/k4.jpg' },
+    { id: 4, title: 'Комод "Скандинавія"', description: 'Масив сосни з олійним покриттям, 4 ящики з прихованими напрямними. 120×45×85 см.', price: 18500, category: 'furniture', image: 'img/services/m4.jpg' },
+    { id: 5, title: 'Стільниця з кварцу', description: 'Кварцовий агломерат 20/30 мм, 25+ кольорів. Не вбирає рідини, стійка до подряпин. Гарантія 10 років.', price: 12000, category: 'accessories', image: 'img/services/p4.jpg' },
+    { id: 6, title: 'Фурнітура Blum', description: 'Комплект: петлі Blumotion + висувні системи Tandembox + підйомники Aventos. Довічна гарантія.', price: 8500, category: 'accessories', image: 'img/product/1.jpg' },
   ];
 
   constructor(private route: ActivatedRoute, public router: Router, private titleService: Title, private meta: Meta) {}
