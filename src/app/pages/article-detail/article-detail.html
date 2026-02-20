@@ -1,4 +1,4 @@
-<section class="bg-warm-white min-h-screen">
+<section class="bg-warm-white dark:bg-dark min-h-screen">
   @if (article) {
     <!-- Full-width hero image -->
     <div class="relative h-[40vh] lg:h-[50vh] overflow-hidden">
@@ -18,12 +18,12 @@
 
     <!-- Content -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="bg-white rounded-2xl p-8 lg:p-12 shadow-sm -mt-16 relative z-10">
-        <div class="text-gray-600 leading-relaxed text-lg whitespace-pre-line">{{ article.content }}</div>
+      <div class="bg-white dark:bg-dark-light rounded-2xl p-8 lg:p-12 shadow-sm -mt-16 relative z-10">
+        <div class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg whitespace-pre-line">{{ article.content }}</div>
       </div>
 
       <div class="text-center mt-12">
-        <a routerLink="/articles" class="inline-flex items-center justify-center px-8 py-3.5 bg-dark text-white font-semibold rounded-xl hover:bg-dark-light transition-colors">
+        <a routerLink="/articles" class="inline-flex items-center justify-center px-8 py-3.5 bg-dark dark:bg-beige text-white dark:text-dark font-semibold rounded-xl hover:bg-dark-light dark:hover:bg-beige-light transition-colors">
           Більше статей
         </a>
       </div>

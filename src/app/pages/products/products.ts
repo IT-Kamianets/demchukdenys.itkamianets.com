@@ -21,12 +21,12 @@ export class ProductsPage implements OnInit {
   ];
 
   products = [
-    { id: 1, title: 'Кухня «Біла класика»', description: 'П-подібна кухня з білими матовими фасадами, дерев\'яною стільницею та темним фартухом. Фурнітура Blum.', price: 85000, category: 'kitchen', image: 'img/slider/k1.jpg' },
-    { id: 2, title: 'Кухня з барною стійкою', description: 'Сучасна кухня у сірих тонах з кварцовою стільницею та барною зоною з оксамитовими стільцями.', price: 120000, category: 'kitchen', image: 'img/slider/k3.jpg' },
-    { id: 3, title: 'Кухня «Мінімалізм»', description: 'Пряма кухня у бежевих тонах з вбудованою технікою: духова шафа, мікрохвильовка, газова поверхня.', price: 65000, category: 'kitchen', image: 'img/services/k4.jpg' },
-    { id: 4, title: 'Комод на металевому каркасі', description: 'Комод з темно-сірими фасадами та білою стільницею на чорному металевому каркасі. 4 ящики.', price: 18500, category: 'furniture', image: 'img/services/m4.jpg' },
-    { id: 5, title: 'Гардеробна система', description: 'Вбудована гардеробна з білими глянцевими фасадами, дзеркальною секцією та робочим столом.', price: 45000, category: 'furniture', image: 'img/services/p4.jpg' },
-    { id: 6, title: 'Спальний гарнітур', description: 'Ліжко з м\'яким узголів\'ям та каркасом зі світлого дерева, висувні ящики, приліжкова тумба.', price: 35000, category: 'furniture', image: 'img/slider/m1.jpg' },
+    { id: 1, title: 'Кухня «Біла класика»', description: 'П-подібна кухня з білими матовими фасадами, дерев\'яною стільницею та темним фартухом. Фурнітура Blum.', price: 85000, category: 'kitchen', image: 'img/slider/k1.webp' },
+    { id: 2, title: 'Кухня з барною стійкою', description: 'Сучасна кухня у сірих тонах з кварцовою стільницею та барною зоною з оксамитовими стільцями.', price: 120000, category: 'kitchen', image: 'img/slider/k3.webp' },
+    { id: 3, title: 'Кухня «Мінімалізм»', description: 'Пряма кухня у бежевих тонах з вбудованою технікою: духова шафа, мікрохвильовка, газова поверхня.', price: 65000, category: 'kitchen', image: 'img/services/k4.webp' },
+    { id: 4, title: 'Комод на металевому каркасі', description: 'Комод з темно-сірими фасадами та білою стільницею на чорному металевому каркасі. 4 ящики.', price: 18500, category: 'furniture', image: 'img/services/m4.webp' },
+    { id: 5, title: 'Гардеробна система', description: 'Вбудована гардеробна з білими глянцевими фасадами, дзеркальною секцією та робочим столом.', price: 45000, category: 'furniture', image: 'img/services/p4.webp' },
+    { id: 6, title: 'Спальний гарнітур', description: 'Ліжко з м\'яким узголів\'ям та каркасом зі світлого дерева, висувні ящики, приліжкова тумба.', price: 35000, category: 'furniture', image: 'img/slider/m1.webp' },
   ];
 
   constructor(private route: ActivatedRoute, public router: Router, private titleService: Title, private meta: Meta) {}

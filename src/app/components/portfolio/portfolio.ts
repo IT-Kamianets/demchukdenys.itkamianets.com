@@ -14,11 +14,11 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   private touchStartX = 0;
 
   portfolioItems = [
-    { id: 1, title: 'Кухня «Біла класика»', description: 'П-подібна кухня з дерев\'яною стільницею та темним фартухом', image: 'img/slider/k1.jpg' },
-    { id: 2, title: 'Кухня з барною стійкою', description: 'Сучасна сіра кухня з барною зоною та оксамитовими стільцями', image: 'img/slider/k3.jpg' },
-    { id: 3, title: 'Спальний гарнітур', description: 'Ліжко з м\'яким узголів\'ям та приліжковою тумбою', image: 'img/slider/m1.jpg' },
-    { id: 4, title: 'Кухня «Мінімалізм»', description: 'Пряма кухня у бежевих тонах з вбудованою технікою', image: 'img/services/k4.jpg' },
-    { id: 5, title: 'Гардеробна система', description: 'Біла гардеробна з дзеркальною секцією та робочим столом', image: 'img/services/p4.jpg' },
+    { id: 1, title: 'Кухня «Біла класика»', description: 'П-подібна кухня з дерев\'яною стільницею та темним фартухом', image: 'img/slider/k1.webp' },
+    { id: 2, title: 'Кухня з барною стійкою', description: 'Сучасна сіра кухня з барною зоною та оксамитовими стільцями', image: 'img/slider/k3.webp' },
+    { id: 3, title: 'Спальний гарнітур', description: 'Ліжко з м\'яким узголів\'ям та приліжковою тумбою', image: 'img/slider/m1.webp' },
+    { id: 4, title: 'Кухня «Мінімалізм»', description: 'Пряма кухня у бежевих тонах з вбудованою технікою', image: 'img/services/k4.webp' },
+    { id: 5, title: 'Гардеробна система', description: 'Біла гардеробна з дзеркальною секцією та робочим столом', image: 'img/services/p4.webp' },
   ];
 
   ngOnInit() {

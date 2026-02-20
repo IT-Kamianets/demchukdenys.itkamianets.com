@@ -2,15 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { DecimalPipe } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
+import { LightboxComponent } from '../../components/lightbox/lightbox';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [RouterLink, DecimalPipe],
+  imports: [RouterLink, DecimalPipe, LightboxComponent],
   templateUrl: './product-detail.html',
   styles: [],
 })
 export class ProductDetailPage implements OnInit {
   product: any = null;
+  lightboxOpen = false;
 
   private products = [
     {
@@ -20,7 +22,7 @@ export class ProductDetailPage implements OnInit {
       fullDescription: 'П-подібна кухня у білому кольорі — поєднання класичної елегантності та сучасної функціональності. Матові фасади з МДФ із фрезеруванням створюють витончений рельєф. Стільниця з натурального дерева додає теплоти та природності інтер\'єру. Фартух оздоблено темною плиткою, яка ефектно контрастує з білими фасадами. Над робочою зоною — підвісні світильники для додаткового освітлення. Фурнітура Blum з плавним закриванням забезпечує комфорт щоденного використання.',
       price: 85000,
       category: 'kitchen',
-      image: 'img/slider/k1.jpg',
+      image: 'img/slider/k1.webp',
       specs: [
         { label: 'Матеріал фасадів', value: 'МДФ, матова фарба з фрезеруванням' },
         { label: 'Стільниця', value: 'Натуральне дерево' },
@@ -38,7 +40,7 @@ export class ProductDetailPage implements OnInit {
       fullDescription: 'Сучасна кухня у поєднанні сірих та білих тонів із акцентною барною стійкою. Матові сірі фасади з МДФ доповнені стільницею з сірого кварцового агломерату. Барна зона органічно з\'єднує кухню із вітальнею, а м\'які стільці з синього оксамиту додають яскравий акцент. Вбудована техніка інтегрована у фасади для цілісного вигляду. Продумане планування дозволяє одночасно готувати та приймати гостей.',
       price: 120000,
       category: 'kitchen',
-      image: 'img/slider/k3.jpg',
+      image: 'img/slider/k3.webp',
       specs: [
         { label: 'Матеріал фасадів', value: 'МДФ, матове сіре покриття' },
         { label: 'Стільниця', value: 'Кварцовий агломерат, сірий' },
@@ -56,7 +58,7 @@ export class ProductDetailPage implements OnInit {
       fullDescription: 'Пряма кухня у стилі мінімалізм із фасадами у ніжному бежевому відтінку. Гладкі поверхні без видимих ручок — система push-to-open забезпечує лаконічний зовнішній вигляд. Зліва вбудована колонка з духовою шафою та мікрохвильовою піччю. Газова варильна поверхня вмонтована у стільницю. Верхні шафи до стелі максимально використовують вертикальний простір для зберігання. Ідеальне рішення для невеликих кухонь.',
       price: 65000,
       category: 'kitchen',
-      image: 'img/services/k4.jpg',
+      image: 'img/services/k4.webp',
       specs: [
         { label: 'Матеріал фасадів', value: 'МДФ, бежеве покриття' },
         { label: 'Стільниця', value: 'Кварцовий агломерат, бежевий' },
@@ -74,7 +76,7 @@ export class ProductDetailPage implements OnInit {
       fullDescription: 'Сучасний комод у стилі лофт для спальні або вітальні. Корпус з темно-сірими матовими фасадами встановлений на чорний металевий каркас, що додає виробу візуальної легкості. Біла стільниця створює елегантний контраст із темними фасадами. Чотири просторі ящики з прихованими напрямними забезпечують плавне та безшумне відкривання. Мінімалістичні чорні ручки підкреслюють сучасний стиль.',
       price: 18500,
       category: 'furniture',
-      image: 'img/services/m4.jpg',
+      image: 'img/services/m4.webp',
       specs: [
         { label: 'Матеріал корпусу', value: 'МДФ, матове покриття' },
         { label: 'Стільниця', value: 'МДФ, білий' },
@@ -92,7 +94,7 @@ export class ProductDetailPage implements OnInit {
       fullDescription: 'Вбудована гардеробна система від стіни до стіни — максимальне використання простору кімнати. Білі глянцеві фасади з чорними акцентними елементами створюють сучасний контрастний вигляд. Ліва частина включає дзеркальну секцію та вбудований робочий стіл з темною стільницею — ідеальне поєднання зони зберігання та робочого місця. Правий блок — повноцінна шафа з розпашними дверцятами. Фурнітура Hettich забезпечує довговічність конструкції.',
       price: 45000,
       category: 'furniture',
-      image: 'img/services/p4.jpg',
+      image: 'img/services/p4.webp',
       specs: [
         { label: 'Матеріал корпусу', value: 'ЛДСП Egger 18 мм' },
         { label: 'Фасади', value: 'МДФ, білий глянець' },
@@ -110,7 +112,7 @@ export class ProductDetailPage implements OnInit {
       fullDescription: 'Спальний гарнітур, виготовлений на замовлення для створення затишної та функціональної спальні. Ліжко з м\'яким узголів\'ям, оббитим темною тканиною, та каркасом зі світлого дерева з вбудованими висувними ящиками для білизни. Приліжкова тумба у тому ж стилі — поєднання світлого дерева та темних акцентних елементів. Гарнітур розроблений з акцентом на ергономіку та раціональне використання простору.',
       price: 35000,
       category: 'furniture',
-      image: 'img/slider/m1.jpg',
+      image: 'img/slider/m1.webp',
       specs: [
         { label: 'Матеріал каркасу', value: 'ЛДСП, світле дерево' },
         { label: 'Узголів\'я', value: 'М\'яке, темна тканина' },

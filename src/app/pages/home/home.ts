@@ -5,6 +5,7 @@ import { PortfolioComponent } from '../../components/portfolio/portfolio';
 import { ServicesComponent } from '../../components/services/services';
 import { ArticlesComponent } from '../../components/articles/articles';
 import { AdvantagesComponent } from '../../components/advantages/advantages';
+import { TestimonialsComponent } from '../../components/testimonials/testimonials';
 import { ContactFormComponent } from '../../components/contact-form/contact-form';
 import { CtaBannerComponent } from '../../components/cta-banner/cta-banner';
 
@@ -16,6 +17,7 @@ import { CtaBannerComponent } from '../../components/cta-banner/cta-banner';
     ServicesComponent,
     ArticlesComponent,
     AdvantagesComponent,
+    TestimonialsComponent,
     ContactFormComponent,
     CtaBannerComponent,
   ],

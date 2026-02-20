@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-beige: #d3c9b7;
   --color-beige-light: #e8e0d4;
@@ -19,6 +21,13 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body,
+html.dark body {
+  background-color: #1a1a1a;
+  color: #f5f0eb;
 }
 
 /* Prevent horizontal overflow on mobile */

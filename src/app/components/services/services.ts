@@ -14,17 +14,17 @@ export class ServicesComponent {
     {
       title: 'Кухні на замовлення',
       description: 'Проєктуємо та виготовляємо кухні будь-якої складності — від мінімалістичних до класичних',
-      image: 'img/services/k4.jpg',
+      image: 'img/services/k4.webp',
     },
     {
       title: 'Корпусні меблі',
       description: 'Комоди, тумби та інші меблі на замовлення з індивідуальним дизайном',
-      image: 'img/services/m4.jpg',
+      image: 'img/services/m4.webp',
     },
     {
       title: 'Гардеробні системи',
       description: 'Вбудовані гардеробні та шафи з продуманою організацією простору',
-      image: 'img/services/p4.jpg',
+      image: 'img/services/p4.webp',
     },
   ];
 }

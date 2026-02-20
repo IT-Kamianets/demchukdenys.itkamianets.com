@@ -1,4 +1,4 @@
-<section class="bg-warm-white min-h-screen">
+<section class="bg-warm-white dark:bg-dark min-h-screen">
   @if (item) {
     <!-- Page header -->
     <div class="bg-dark py-10 lg:py-14">
@@ -14,22 +14,26 @@
     <!-- Image - full visible -->
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mb-8">
       <div class="rounded-2xl overflow-hidden shadow-xl -mt-6 relative z-10">
-        <img [src]="item.image" [alt]="item.title" class="w-full h-auto object-contain">
+        <img [src]="item.image" [alt]="item.title" class="w-full h-auto object-contain cursor-zoom-in" (click)="lightboxOpen = true">
       </div>
     </div>
 
     <!-- Content -->
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="bg-white rounded-2xl p-8 lg:p-12 shadow-sm">
+      <div class="bg-white dark:bg-dark-light rounded-2xl p-8 lg:p-12 shadow-sm">
         <div class="w-12 h-1 bg-beige mb-6"></div>
-        <p class="text-gray-600 leading-relaxed text-lg">{{ item.fullDescription }}</p>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">{{ item.fullDescription }}</p>
       </div>
 
       <div class="text-center mt-12">
-        <a routerLink="/portfolios" class="inline-flex items-center justify-center px-8 py-3.5 bg-dark text-white font-semibold rounded-xl hover:bg-dark-light transition-colors">
+        <a routerLink="/portfolios" class="inline-flex items-center justify-center px-8 py-3.5 bg-dark dark:bg-beige text-white dark:text-dark font-semibold rounded-xl hover:bg-dark-light dark:hover:bg-beige-light transition-colors">
           Дивитись всі роботи
         </a>
       </div>
     </div>
+  }
+
+  @if (lightboxOpen && item) {
+    <app-lightbox [images]="[item.image]" [currentIndex]="0" (close)="lightboxOpen = false" />
   }
 </section>
