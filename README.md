@@ -71,7 +71,3 @@ npm start
 # Зібрати production-білд
 npm run build
 ```
-
-## Автор
-
-**Demchuk Denys** - [Telegram](https://t.me/demchuk_denys) | [Instagram](https://instagram.com/demchuk_denys) | [Facebook](https://www.facebook.com/denys.demchuk.2025)
