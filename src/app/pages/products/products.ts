@@ -18,7 +18,6 @@ export class ProductsPage implements OnInit {
     { key: 'all', label: 'Всі' },
     { key: 'kitchen', label: 'Кухні' },
     { key: 'furniture', label: 'Меблі' },
-    { key: 'accessories', label: 'Аксесуари' },
   ];
 
   products = [
