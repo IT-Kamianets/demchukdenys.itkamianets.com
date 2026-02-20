@@ -12,9 +12,9 @@ export class ArticlesPage implements OnInit {
   constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit() {
-    this.title.setTitle('Статті та новини — Demchuk Denys');
+    this.title.setTitle('Статті та новини - Demchuk Denys');
     this.meta.updateTag({ name: 'description', content: 'Корисні статті про дизайн інтер\'єру, тренди у меблях та поради від професіоналів.' });
-    this.meta.updateTag({ property: 'og:title', content: 'Статті та новини — Demchuk Denys' });
+    this.meta.updateTag({ property: 'og:title', content: 'Статті та новини - Demchuk Denys' });
     this.meta.updateTag({ property: 'og:description', content: 'Корисні статті про дизайн інтер\'єру, тренди у меблях та поради від професіоналів.' });
   }
 
@@ -29,7 +29,7 @@ export class ArticlesPage implements OnInit {
     {
       id: 2,
       title: 'Як обрати ідеальну кухню: поради від виробника',
-      excerpt: 'Розбираємо ключові моменти при замовленні кухні — від планування до вибору матеріалів.',
+      excerpt: 'Розбираємо ключові моменти при замовленні кухні - від планування до вибору матеріалів.',
       date: '10 Січня 2024',
       image: 'img/article/k.webp',
     },

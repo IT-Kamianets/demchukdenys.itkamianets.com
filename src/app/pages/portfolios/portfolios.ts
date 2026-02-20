@@ -12,9 +12,9 @@ export class PortfoliosPage implements OnInit {
   constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit() {
-    this.title.setTitle('Портфоліо — Demchuk Denys');
+    this.title.setTitle('Портфоліо - Demchuk Denys');
     this.meta.updateTag({ name: 'description', content: 'Наші кращі роботи: кухні, спальні, вітальні та гардеробні кімнати преміум-класу.' });
-    this.meta.updateTag({ property: 'og:title', content: 'Портфоліо — Demchuk Denys' });
+    this.meta.updateTag({ property: 'og:title', content: 'Портфоліо - Demchuk Denys' });
     this.meta.updateTag({ property: 'og:description', content: 'Наші кращі роботи: кухні, спальні, вітальні та гардеробні кімнати преміум-класу.' });
   }
 

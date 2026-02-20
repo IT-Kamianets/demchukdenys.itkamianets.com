@@ -12,16 +12,16 @@ export class ServicesPage implements OnInit {
   constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit() {
-    this.title.setTitle('Послуги — Demchuk Denys');
+    this.title.setTitle('Послуги - Demchuk Denys');
     this.meta.updateTag({ name: 'description', content: 'Кухні на замовлення, корпусні меблі та гардеробні системи від Demchuk Denys. Повний цикл від заміру до монтажу.' });
-    this.meta.updateTag({ property: 'og:title', content: 'Послуги — Demchuk Denys' });
+    this.meta.updateTag({ property: 'og:title', content: 'Послуги - Demchuk Denys' });
     this.meta.updateTag({ property: 'og:description', content: 'Кухні на замовлення, корпусні меблі та гардеробні системи від Demchuk Denys.' });
   }
 
   services = [
     {
       title: 'Кухні на замовлення',
-      description: 'Проєктуємо та виготовляємо кухні будь-якої складності — від компактних прямих до просторих П-подібних з барною стійкою. Повний цикл: від заміру до монтажу.',
+      description: 'Проєктуємо та виготовляємо кухні будь-якої складності - від компактних прямих до просторих П-подібних з барною стійкою. Повний цикл: від заміру до монтажу.',
       includes: ['Безкоштовний замір та консультація', '3D-візуалізація майбутньої кухні', 'Виготовлення з якісних матеріалів', 'Доставка та професійний монтаж'],
       image: 'img/services/k4.webp',
     },

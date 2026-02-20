@@ -28,9 +28,9 @@ export class HomeComponent implements OnInit {
   constructor(private title: Title, private meta: Meta) {}
 
   ngOnInit() {
-    this.title.setTitle('Demchuk Denys — Кухні та меблі люкс якості');
+    this.title.setTitle('Demchuk Denys - Кухні та меблі люкс якості');
     this.meta.updateTag({ name: 'description', content: 'Створюємо унікальні меблі преміум-класу. Дизайн інтер\'єру, кухні та меблі на замовлення у Кам\'янці-Подільському.' });
-    this.meta.updateTag({ property: 'og:title', content: 'Demchuk Denys — Кухні та меблі люкс якості' });
+    this.meta.updateTag({ property: 'og:title', content: 'Demchuk Denys - Кухні та меблі люкс якості' });
     this.meta.updateTag({ property: 'og:description', content: 'Створюємо унікальні меблі преміум-класу, які перетворюють ваш простір на витвір мистецтва.' });
   }
 }

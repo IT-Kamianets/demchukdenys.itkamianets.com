@@ -1,59 +1,77 @@
-# Demchukdenys
+# Demchuk Denys - Меблі на замовлення
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
+Сайт-візитка меблевої майстерні **Demchuk Denys** з Кам'янця-Подільського. Кухні, корпусні меблі та гардеробні системи преміум-класу.
 
-## Development server
+**Live:** [demchukdenys.itkamianets.com](https://demchukdenys.itkamianets.com)
 
-To start a local development server, run:
+## Технології
 
-```bash
-ng serve
+- **Angular 21** - standalone components, lazy routing
+- **Tailwind CSS 4** - utility-first стилі, dark mode
+- **TypeScript 5.9**
+- **WebP** - оптимізовані зображення
+
+## Функціонал
+
+- Адаптивний дизайн (mobile-first)
+- Dark / Light режим з збереженням у localStorage
+- Каталог продукції з пошуком та фільтрами
+- Портфоліо робіт з лайтбокс-галереєю
+- Секція відгуків клієнтів
+- Форма зворотного зв'язку
+- Плаваюча кнопка Telegram / Телефон
+- Кнопка "вгору"
+- Scroll-анімації при появі секцій
+- SEO: мета-теги, Open Graph
+
+## Структура
+
+```
+src/
+  app/
+    components/        # Перевикористовувані компоненти
+      header/              Хедер з навігацією та перемикачем теми
+      footer/              Футер з контактами та соцмережами
+      hero/                Головний банер з пошуком
+      portfolio/           Каруселька робіт
+      services/            Сітка послуг
+      articles/            Сітка статей
+      advantages/          Переваги + статистика
+      testimonials/        Відгуки клієнтів
+      contact-form/        Форма зворотного зв'язку
+      cta-banner/          CTA-банер
+      lightbox/            Лайтбокс для фото
+      theme-toggle/        Перемикач теми
+      floating-contact/    Плаваюча кнопка зв'язку
+      back-to-top/         Кнопка "вгору"
+    pages/             # Сторінки (lazy-loaded)
+      home/                Головна
+      portfolios/          Список робіт
+      portfolio-detail/    Деталі роботи
+      products/            Каталог продукції
+      product-detail/      Деталі продукту
+      articles/            Список статей
+      article-detail/      Деталі статті
+      services/            Послуги
+    directives/        # Директиви анімацій
+  styles.css           # Глобальні стилі, Tailwind, dark mode
+public/
+  img/                 # Зображення (JPG + WebP)
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Запуск
 
 ```bash
-ng generate component component-name
+# Встановити залежності
+npm install
+
+# Запустити dev-сервер (http://localhost:4200)
+npm start
+
+# Зібрати production-білд
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Автор
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Demchuk Denys** - [Telegram](https://t.me/demchuk_denys) | [Instagram](https://instagram.com/demchuk_denys) | [Facebook](https://www.facebook.com/denys.demchuk.2025)

@@ -32,9 +32,9 @@ export class ProductsPage implements OnInit {
   constructor(private route: ActivatedRoute, public router: Router, private titleService: Title, private meta: Meta) {}
 
   ngOnInit() {
-    this.titleService.setTitle('Продукція — Demchuk Denys');
+    this.titleService.setTitle('Продукція - Demchuk Denys');
     this.meta.updateTag({ name: 'description', content: 'Якісні кухні, меблі та аксесуари від Demchuk Denys. Кухні на замовлення, шафи-купе, комоди.' });
-    this.meta.updateTag({ property: 'og:title', content: 'Продукція — Demchuk Denys' });
+    this.meta.updateTag({ property: 'og:title', content: 'Продукція - Demchuk Denys' });
     this.meta.updateTag({ property: 'og:description', content: 'Якісні кухні, меблі та аксесуари від Demchuk Denys.' });
 
     this.route.queryParams.subscribe(params => {
